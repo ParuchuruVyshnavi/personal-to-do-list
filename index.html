@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title> To-Do List</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="app">
+    <h1> 💖 Personal To-Do Planner</h1>
+    <p class="subtitle">Organize • Plan • Achieve ✨</p>
+
+    <div class="tabs">
+      <div class="tab active" data-filter="all">✨ All</div>
+      <div class="tab" data-filter="Study">📚 Study</div>
+      <div class="tab" data-filter="Self-Care">🌸 Self-Care</div>
+      <div class="tab" data-filter="Work">💼 Work</div>
+      <div class="tab" data-filter="Housework">Housework</div>
+    </div>
+
+    <input id="taskInput" placeholder="❤️ one small step today ? " />
+
+    <select id="category">
+      <option>Study</option>
+      <option>Self-Care</option>
+      <option>Work</option>
+      <option>Housework</option>
+    </select>
+
+    <select id="priority">
+      <option value="low">🌸 Low</option>
+      <option value="medium">💛 Medium</option>
+      <option value="high">❤️ High</option>
+    </select>
+
+    <input type="date" id="taskDate">
+
+    <button onclick="addTask()">💗 Add Task</button>
+
+    <ul id="taskList"></ul>
+    <p class="empty" id="emptyMsg">🌈 No tasks yet… add something cute!</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

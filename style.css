@@ -1,0 +1,129 @@
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #076d96, #ffd6e8);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app {
+  background: #fff6fb;
+  width: 500px;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #3313c2;
+  margin-bottom: 5px;
+  animation: float 3s ease-in-out infinite;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 13px;
+  color: hwb(332 4% 25%);
+  margin-bottom: 15px;
+}
+
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.tab {
+  padding: 6px 12px;
+  border-radius: 15px;
+  font-size: 12px;
+  cursor: pointer;
+  background: hwb(337 2% 59% / 0.164);
+  color: hsl(256, 88%, 35%);
+  transition: 0.3s;
+}
+
+.tab.active {
+  background: hsl(113, 91%, 42%);
+  color: white;
+  box-shadow: 0 0 10px rgba(255,79,154,0.6);
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: #ffeef6;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: rgb(20, 197, 43);
+  border: none;
+  border-radius: 25px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+}
+
+li {
+  background: white;
+  padding: 10px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from { opacity:0; transform: translateY(10px); }
+  to { opacity:1; transform: translateY(0); }
+}
+
+li.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.priority-low { border-left: 5px solid #ffb6d9; }
+.priority-medium { border-left: 5px solid #ffd966; }
+.priority-high { border-left: 5px solid #ff6b6b; }
+
+.actions span {
+  cursor: pointer;
+  margin-left: 8px;
+}
+
+.empty {
+  text-align: center;
+  font-size: 13px;
+  color: hsl(0, 89%, 19%);
+  margin-top: 10px;
+}
